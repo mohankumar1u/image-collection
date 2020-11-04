@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.popup{
+  display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#img-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#next-Btn{
+    color: white;
+    font-size: xxx-large;
+    font-family: ui-serif;
+    background-color: black;
+    border: 0px;
+}
+#left-arrow{
+}
+#close{
   color: white;
+  font-size: xxx-large;
+  font-family: ui-serif;
+  position: absolute;
+  background-color: black;
+  /* height: 2px; */
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  /* top: 15px; */
+  right: 15px;
+}
+#container{
+  line-height: 0;
+   
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;  
 }
 
-.App-link {
-  color: #61dafb;
+#container img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1200px) {
+  #container {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 1000px) {
+  #container {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #container {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #container {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
   }
 }
